@@ -3,16 +3,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
-
-struct _pixel
-{
-    float r;
-    float g;
-    float b;
-    int x;
-    int y;
-};
-typedef struct _pixel Pixel;
+#include "pixels.h"
 
 void flipVertically(std::vector<Pixel> &pixelList)
 {
@@ -94,6 +85,7 @@ int main(int argc, char *argv[])
                 out << pixelList[i].x << ',' << pixelList[i].y << ',' << pixelList[i].r << ',' << pixelList[i].g << ',' << pixelList[i].b << '\n';
             }
             out.close();
+            std::cout << "File flipped.dat has been created" << std::endl;
         }
         else
         {
